@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Personal Website </title>
+ <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link href="Style.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/x-icon" href="Chance.jpg">
+</head>
+<body>
+
+  
+ <div class="navbar">
+      <a href="#home" id="home-link">Home</a>
+      <a href="#about" id="about-link">About</a>
+      <a href="#resume" id="resume-link">Resume</a>
+      <a href="#gallery" id="gallery-link">Gallery</a>
+      <a href="#contact" id="contact-link">Contact</a>
+
+      <div class="navbar-brand">
+      <audio src="freddy.mp3" id="myAudio"></audio>
+      
+      <img src ="Chance.jpg" onclick="playMyAudio()" />
+      <span class="brand-text">Khert's<br>Website</span>
+<script>
+function playMyAudio(){
+  // Reset ang audio to the beginning at i play ulit
+  document.getElementById("myAudio").currentTime = 0;
+  document.getElementById("myAudio").play();
+}
+</script>
+     </div>
+  </div>
+
+  <!--mga nakakaligaw na script..sakit sa mata--><!--smooth scrolling para mapa easy-->
+<script>
+document.getElementById('about-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+<script>
+document.getElementById('home-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  const audio = document.getElementById('home-sound');
+  audio.currentTime = 0;
+  audio.play();
+  document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('about-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  const audio = document.getElementById('about-sound');
+  audio.currentTime = 0;
+  audio.play();
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('contact-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  const audio = document.getElementById('contact-sound');
+  audio.currentTime = 0;
+  audio.play();
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('resume-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  const audio = document.getElementById('resume-sound');
+  audio.currentTime = 0;
+  audio.play();
+  document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('gallery-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  const audio = document.getElementById('gallery-sound');
+  audio.currentTime = 0;
+  audio.play();
+  document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+<!--sound id o lahat ng buttons may sound nito-->
+         <audio id="home-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="about-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="contact-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="resume-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="gallery-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+   
+    <audio id="html-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="css-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="js-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+    <audio id="lua-sound" src="roblox-button-sfx.mp3" preload="auto"></audio>
+
+    <audio id="roblox-sound" src="mp4/oof sound.mp3" preload="auto"></audio>
+    <audio id="minecraft-sound" src="mp4/minecraft hurt.mp3" preload="auto"></audio>
+
+    
+
+<section id="home">
+ <h1>Welcome to My Personal Website</h1>
+  <p><b>This is a place where I share my interests, projects, and more.</b></p>  
+  <img src="myPhoto/khery.jpg" alt="My Photo" class="profile-photo"> 
+</section>
+
+<div class="home-content-flex">
+  <h1>Coding/markup language used<br>for this webpage</h1>
+  <div class="zoom-image-container">
+    <audio src="roblox-button-sfx.mp3" id="button-sound"></audio>
+    <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+      <img src="myPhoto/html.jpg" alt="HTML" class="zoom-image" onclick="playHtmlSound(event)">
+    </a>
+     <script>
+function playHtmlSound() {
+  document.getElementById("html-sound").currentTime = 0;
+  document.getElementById("html-sound").play();
+}
+</script>
+
+    <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+      <img src="myPhoto/css.jpg" alt="CSS" class="zoom-image" onclick="playCssSound(event)">
+    </a>
+     <script>
+function playCssSound() {
+  document.getElementById("css-sound").currentTime = 0;
+  document.getElementById("css-sound").play();
+}
+</script>
+
+    <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+      <img src="myPhoto/js.jpg" alt="JavaScript" class="zoom-image" onclick="playJsSound(event)">
+    </a>
+     <script>
+function playJsSound() {
+  document.getElementById("js-sound").currentTime = 0;
+  document.getElementById("js-sound").play();
+}
+</script>
+
+  </div>
+</div>
+<!-- about -->
+  <section id="about">
+  <div class="about-introduction">
+    <h2>About Me</h2>
+    <p> Hello, my name is <ins>Khert Harrie D. Kaibigan</ins>. I am a 15 year old student with a passion for technology and game developing. I enjoy coding, playing video games, and exploring new ideas. This website is a reflection of my interests and stuff</p>
+    <p> I am constantly learning and improving my skills, and I hope to create amazing projects in the future.</p>
+  </div>
+  <div class="about-interests-flex">
+  <div class="about-interests">
+    <h3>My Interests</h3>
+    <p>I've also been learning LUA, a programming language used for game development and one of the easiest languages to learn.</p>
+    <p>I'll use this knowledge for <ins>ROBLOX</ins> studio development so I can make my own personal games.</p>
+  </div>
+  <a href="https://www.lua.org/" target="_blank">
+    <div class="about-interests-img">
+      <img src="myPhoto/lua-logo.jpg" alt="Lua Logo" class="zoom-image" onclick="playLuaSound(event)">
+      <script>
+      function playLuaSound() {
+  document.getElementById("lua-sound").currentTime = 0;
+  document.getElementById("lua-sound").play();
+}
+</script>
+    </div>
+  </a>
+</div>
+</section>
+
+<section id="favorites">
+  <div class="about-favgames">
+    <h3>Games That I Always Play(Favorites)</h3>
+    <!-- lahat ng game logo -->
+<div class="games-logo-row">
+  <img src="game logo and scenery/maxresdefault.jpg" alt="Roblox" class="games-logo" onclick="playRobloxSound(event)">
+  <script>
+      function playRobloxSound() {
+  document.getElementById("roblox-sound").currentTime = 0;
+  document.getElementById("roblox-sound").play();
+}
+</script>
+
+  <img src="game logo and scenery/minecraft.jpg" alt="Minecraft" class="games-logo" onclick="playMinecraftSound(event)">
+</div>
+  <script>
+      function playMinecraftSound() {
+  document.getElementById("minecraft-sound").currentTime = 0;
+  document.getElementById("minecraft-sound").play();
+}
+</script>
+<img src="game logo and scenery/cry of fear.jpg" alt="Cry of Fear" class="games-logo cry-of-fear" onclick="showVideo()">
+  <div id="videoPopup">
+  <button onclick="closeVideo()">X</button>
+  <div class="vid-wrapper">
+  <img src="game logo and scenery/SIMON.jpg" alt="Cry of Fear" class="corner-left">
+  <video id="popupVideo" controls autoplay>
+    <source src="mp4/booksimon.mp4" type="video/mp4">
+    Your browser does not support HTML video 
+  </video>
+  <img src="game logo and scenery/book simon.jpg" alt="Cry of Fear" class="corner-right">
+  </div>
+</div>
+  <script>
+  function showVideo() {
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("popupVideo");
+    popup.style.display = "flex";
+    <!-- marereset ang video sa simula na property na to-->
+    video.currentTime = 0;
+    video.play();
+  }
+
+  function closeVideo() {
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("popupVideo");
+    popup.style.display = "none";
+    video.pause();
+  }
+</script><script>
+  function showVideo() {
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("popupVideo");
+    popup.style.display = "flex";
+    <!-- marereset ang video sa simula na property na to-->
+    video.currentTime = 0;
+    video.play();
+  }
+
+  function closeVideo() {
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("popupVideo");
+    popup.style.display = "none";
+    video.pause();
+  }
+</script>
+<div id="credits">
+<p>original video: <a href="https://youtu.be/j5H2Xy8RgrY?si=9T8L1kFJML0xZYru" target="_blank"><img src="game logo and scenery/youtube icon.jpg" alt="Cry of Fear"></a></p>
+</div>
+<div class="cry-of-fear-description">
+<p><b>Cry of Fear</b> is one of my favorite horror games, known for its intense atmosphere and psychological horror elements.</p>
+</div>
+<div class="games-played">
+  <h1>Games I Played So Far</h1>
+ 
+  <div class="marquee-container">
+    
+      <div class="logos">
+      <div class="logos-slide">
+        <img src="game logo and scenery/maxresdefault.jpg" />
+        <img src="game logo and scenery/cry of fear.jpg" />
+        <img src="game logo and scenery/minecraft.jpg" />
+        <img src="game logo and scenery/ultrakill.jpg" />
+        <img src="game logo and scenery/Half-Life-Logo-2.jpg" />
+        <img src="game logo and scenery/HotlineMiami.jpg" />
+        <img src="game logo and scenery/postal2.jpg" />
+        <img src="game logo and scenery/left4dead.webp" />
+        <img src="game logo and scenery/tekken8.jpg" />
+        <img src="game logo and scenery/readyornot.jpg" />
+        <img src="game logo and scenery/deadcells.jpg" />
+        <img src="game logo and scenery/terraria.jpg" />
+        <img src="game logo and scenery/Doometernal.jpg" />
+        <img src="game logo and scenery/halo.jpg" />
+      </div>
+    </div>
+
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
+</div>
+</section>
+<section id="music">
+<div class="MUSIC">
+<h1 id="master-title" class="no_select" onclick="toggleMasterDropdown()">My Top 5 Favorite Bands
+<span class="arrow">&#9660;</span>
+</h1>
+
+<div class="bands master-dropdown">
+  
+<div class="bands">
+
+    <div class="sleeptoken_bg" onclick="toggleBand(this)">
+            <div class="band-header">
+                <p class="sleeptoken">Sleeptoken</p>
+                
+                <img src="Music,Band imgs/sleeptoken.jpg" alt="sleep token" class="band-logo">
+            </div>
+            
+            <audio src="Music,Band imgs/thememusic/appariation.mp3" preload="auto"></audio>
+
+            
+            <div class="dropdown">
+                <div class="sleeptoken_description">
+                Sleep Token is personally my most favorite band, known for their unique blend of metal and atmospheric music.<br>The vessel for the band is a mysterious figure known as "Vessel," who performs in a mask and hood, adding to the band's enigmatic image.<br>
+                
+                my favorite song from them is "The summoning"/"take me back to eden" and "Appariation"<br>
+                which is this song that is playing right now.
+            </div>
+        </div>
+    </div>
+
+    <div class="starset_bg" onclick="toggleBand(this)">
+      <div class="band-header">
+  <p class="starset">Starset</p>
+
+  <img src="Music,Band imgs/starsetextra.jpg" alt="Starset" class="band-logo">
+</div>
+
+      <audio src="Music,Band imgs/thememusic/satellite.mp3" preload="auto"></audio>
+
+  <div class="dropdown">
+    <div class="starset_description">
+      One of the first rock bands that was introduced to me is Starset. I've been listening to this band for almost 8 years now. And yes, I was 7 years old when I started.<br>
+      They are known for their cinematic sound and storytelling through music.<br>
+
+      My favorite song from them is "Satellite," which is playing right now.
+    </div>
+  </div>
+</div>
+
+<div class="badomens_bg" onclick="toggleBand(this)">
+      <div class="band-header">
+  <p class="badomens">Bad Omens</p>
+
+  <img src="Music,Band imgs/badomens.jpg" alt="Bad Omens" class="band-logo">
+</div>
+
+      <audio src="Music,Band imgs/thememusic/The Grey.mp3" preload="auto"></audio>
+
+  <div class="dropdown">
+    <div class="badomens_description">
+      Bad Omens is one of the recent band i know. ive been listening to them for 2 years now.<br>
+      They are known for their emotional lyrics and powerful sound.<br>
+
+      My favorite song from them is "who are you?" and "The Grey" which is playing right now.
+    </div>
+  </div>
+</div>
+
+<div class="neighbourhood_bg" onclick="toggleBand(this)">
+      <div class="band-header">
+  <p class="neighbourhood">The Neighbourhood</p>
+
+  <img src="Music,Band imgs/theneighbourhood.jpg" alt="Neighbourhood" class="band-logo">
+</div>
+
+      <audio src="Music,Band imgs/thememusic/softcore.mp3" preload="auto"></audio>
+
+  <div class="dropdown">
+    <div class="neighbourhood_description">
+      I listen to the neighbourhood whenever i feel like listening to some chill music.<br>
+      They are known for their dreamy sound and introspective lyrics.<br>
+      and whenever i listen to them, it just remind me of a certain someone...<br>
+      My favorite song from them is "Softcore," which is playing right now.
+    </div>
+  </div>
+</div>
+
+<div class="pilots_bg" onclick="toggleBand(this)">
+      <div class="band-header">
+  <p class="pilots">Twenty One Pilots</p>
+
+  <img src="Music,Band imgs/twentyonepilots.jpg" alt="TwentyOne Pilots" class="band-logo">
+</div>
+
+      <audio src="Music,Band imgs/thememusic/the line.mp3" preload="auto"></audio>
+
+  <div class="dropdown">
+    <div class="pilots_description">
+      Twenty One Pilots is part of my childhood. they are known for their genre-blending sound and thought-provoking lyrics.<br>
+      They have a unique style that combines elements of rock, pop, and hip-hop.<br>
+      I'm not really a fan of "the Line" but I like the song but I prefer "Stressed Out" and "Doubt".<br>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+  <script>
+function toggleMasterDropdown(){
+  document.querySelectorAll('.master-dropdown').forEach(dropdown => dropdown.classList.toggle('show'));
+}
+
+
+function toggleBand(element) {
+    const dropdown = element.querySelector('.dropdown');
+    const audio = element.querySelector('audio');
+
+    const isOpen = dropdown.classList.contains('show');
+
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+    document.querySelectorAll('audio').forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+    });
+
+    if (!isOpen) {
+        dropdown.classList.add('show');
+        if (audio) audio.play();
+    }
+}
+
+function toggleMasterDropdown(){
+  const masterDropdown=document.querySelector('.master-dropdown');
+  const masterTitle=document.getElementById('master-title');
+
+  masterDropdown.classList.toggle('show');
+  masterTitle.classList.toggle('arrow-flip');
+  const arrow = masterTitle.querySelector('.arrow');
+  if (masterDropdown.classList.contains('show')) {
+    arrow.style.transform = 'rotate(180deg)';
+  } else {
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+</script>
+
+</section>
+
+<section id="fav_music">
+  <div class="music_list">
+    <h1 class="no-select" onclick="toggleMainDropdown(this)">
+      My Top 10 Favorite Music
+      <span class="arrow">&#9660;</span>
+    </h1>
+    <div class="music-list-dropdown">
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,0)">
+          <div class="satellite">
+            <img src="Music,Band imgs/starsetextra.jpg" class="album-cover">
+            <span>Starset - Satellite</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box starset-style">
+            <audio src="Music,Band imgs/thememusic/satellite.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,20)">
+          <div class="Summoning">
+            <img src="Music,Band imgs/FAVmusic/album/The summoning.jpg" class="album-cover">
+            <span>Sleeptoken - The Summoning</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/The Summoning.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+       <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,20)">
+          <div class="Who-are-you">
+            <img src="Music,Band imgs/FAVmusic/album/who are you.jpg" class="album-cover">
+            <span>Bad Omens - Who Are You?</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/Who Are You.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+       <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,52)">
+          <div class="TheDiary">
+            <img src="Music,Band imgs/FAVmusic/album/diary.jpg" class="album-cover">
+            <span>Breaking Benjamin - The Diary of Jane</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/The Diary of Jane.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,120)">
+          <div class="Summoning">
+            <img src="Music,Band imgs/FAVmusic/album/The summoning.jpg" class="album-cover">
+            <span>Sleeptoken - Take me back to Eden</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/Take Me Back To Eden.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,60)">
+          <div class="Who-are-you">
+            <img src="Music,Band imgs/FAVmusic/album/who are you.jpg" class="album-cover">
+            <span>Bad Omens - The Grey</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/The Grey.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,190)">
+          <div class="Letdown">
+            <img src="Music,Band imgs/FAVmusic/album/letdown.jpg" class="album-cover">
+            <span>Radiohead - Let down (Remastered)</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/Let Down (Remastered).mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,145)">
+          <div class="SDITD">
+            <img src="Music,Band imgs/FAVmusic/album/SDITD.jpg" class="album-cover">
+            <span>Joji - SLOW DANCING IN THE DARK</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/SLOW DANCING IN THE DARK.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,0)">
+          <div class="Softcore">
+            <img src="Music,Band imgs/FAVmusic/album/softcore.jpg" class="album-cover">
+            <span>The Neighbourhood - Softcore</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/softcore.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-title" onclick="playTrackAudio(this,15)">
+          <div class="RH">
+            <img src="Music,Band imgs/FAVmusic/album/RH.jpg" class="album-cover">
+            <span>d4vd - Romantic Homicide</span>
+          </div>
+        </div>
+        <div class="music-player-dropdown">
+          <div class="music-player-box sleeptoken-style">
+            <audio src="Music,Band imgs/FAVmusic/Romantic Homicide.mp3" preload="auto"></audio>
+          </div>
+        </div>
+      </div>
+<script>
+  function toggleMasterDropdown(){
+  document.querySelectorAll('.master-dropdown').forEach(dropdown => dropdown.classList.toggle('show'));
+}
+function toggleMainDropdown(header) {
+  const dropdown = header.parentElement.querySelector('.music-list-dropdown');
+  const arrow = header.querySelector('.arrow');
+  dropdown.classList.toggle('show');
+  header.classList.toggle('arrow-flip');
+  if (dropdown.classList.contains('show')) {
+    arrow.style.transform = 'rotate(180deg)';
+  } else {
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+function fadeInAudio(audio, duration = 1500) {
+  audio.volume = 0;
+  audio.play();
+  let step = 0.05;
+  let interval = duration / (1 / step);
+  let fade = setInterval(() => {
+    if (audio.volume < 1) {
+      audio.volume = Math.min(audio.volume + step, 1);
+    } else {
+      clearInterval(fade);
+    }
+  }, interval);
+}
+function fadeOutAudio(audio, duration = 1000, callback) {
+  let step = 0.05;
+  let interval = duration / (1 / step);
+  let fade = setInterval(() => {
+    if (audio.volume > step) {
+      audio.volume = Math.max(audio.volume - step, 0);
+    } else {
+      clearInterval(fade);
+      audio.pause();
+      audio.currentTime = 0;
+      audio.volume = 1;
+      if (callback) callback();
+    }
+  }, interval);
+}
+
+function playTrackAudio(trackTitle, startTime = 0) {
+  const audio = trackTitle.parentElement.querySelector('.music-player-box audio');
+  const isplaying = audio && !audio.paused && audio.currentTime > 0;
+
+  document.querySelectorAll('.music-player-box audio').forEach(a => {
+    if (a !== audio && !a.paused && a.currentTime > 0) {
+      fadeOutAudio(a, 1000);
+    } else if (a !== audio) {
+      a.pause();
+      a.currentTime = 0;
+      a.volume = 1;
+    }
+  });
+
+  if (audio && isplaying) {
+    fadeOutAudio(audio, 1000);
+    return;
+  }
+
+  if (audio && !isplaying) {
+    audio.currentTime = startTime;
+    fadeInAudio(audio, 1500);
+  }
+}
+</script>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+    <p>Email: @example.com</p>
+  </section>
+
+
+
+</body>
+</html>
+
